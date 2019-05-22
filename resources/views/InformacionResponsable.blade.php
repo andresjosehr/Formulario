@@ -16,7 +16,7 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
       </div>
-      <input class="form-control" id="telefono_docente" required="" placeholder="Escriba aqui el numero celular del docente" type="text">
+      <input class="form-control" id="telefono_docente" required="" placeholder="Escriba aqui el numero celular del docente" type="number">
    </div>
 </div>
 <div class="form-group mb-3" style="margin-top: 20px;">
@@ -25,6 +25,6 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
       </div>
-      <input class="form-control" id="email_docente" required="" placeholder="Escriba aqui el correo electronico del docente" type="number">
+      <input class="form-control" id="email_docente" required="" placeholder="Escriba aqui el correo electronico del docente" type="email">
    </div>
 </div>

@@ -186,3 +186,29 @@
       </label>
    </div>
 </div>
+<div class="form-group" style="margin-top: 40px;margin-bottom: 40px;">
+        <label class="col control-label">
+            Carga las fotos del aula
+        </label>
+        <div class="col">
+            <span >
+                <input onchange="validateFile()" style="width: 100%" id="input-2" name="input2[]" type="file" class="file btn btn-default" multiple data-show-upload="true" data-show-caption="true">
+            </span>
+        </div>
+    </div>
+
+
+    <script>
+       validateFile=()=>{
+         console.log("Epale")
+         var $fileUpload = $("input[type='file']");
+         if (parseInt($fileUpload.get(0).files.length) > 10){
+            alert("Solo puedes subir un maximo de 10 fotos");
+            $("input[type='file']").val(null);
+         }
+         if (parseInt($fileUpload.get(0).files.length) < 5){
+            alert("Tienes que subir un minimo de 5 fotos");
+            $("input[type='file']").val(null);
+         }
+       }
+    </script>

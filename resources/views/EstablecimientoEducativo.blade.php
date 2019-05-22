@@ -57,7 +57,7 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-badge"></i></span>
       </div>
-      <input class="form-control" placeholder="Escriba la cantidad aqui en numeros enteros" type="number">
+      <input class="form-control" id="numero_estudiantes" placeholder="Escriba la cantidad aqui en numeros enteros" type="number">
    </div>
 </div>
 <div class="form-group mb-3" style="margin-top: 20px;">

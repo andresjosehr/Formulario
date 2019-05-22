@@ -30,7 +30,7 @@
                        <h2 id="nombre_info"></h2>
                      </div>
                      <div class="col-md-3">
-                       <p>Codigo</p>
+                       <p>Codigo DANE</p>
                        <h3 style="margin-top: -15px; font-size: 1rem" id='codigo'>Valor</h3>
                      </div>
                      <div class="col-md-3">
@@ -97,16 +97,16 @@
                               </div>
                            </div>
                         </div>
+                        </form>
                         <div class="row setup-content" id="step-4">
                            <div class="col-xs-12" style="width: 100%;">
                               <div class="col-md-12" style="padding: 50px; margin-bottom: 50px; width: 100%">
                                 <br>
                                  @include("AulaInformatica")
-                                 <button onabort="recopDat()" class="btn btn-success pull-right btn-block enviar">¡Enviar!</button>
+                                 <button onclick="recopDat()" class="btn btn-success pull-right btn-block enviar">¡Enviar!</button>
                               </div>
                            </div>
                         </div>
-                     </form>
                   </div>
                   <style>
                      .btn-primary{
@@ -133,11 +133,11 @@
 
                   </style>
                     <script>
-                        window.recopDat=()=>{
+                        window.recopDat=()=>{ 
                         $(".enviar").on('submit', function(e){
                             e.preventDefault();
                             var Data={};
-                            $("#form input[type='text'], #form input[type='email'], select").map(function(){
+                            $("#form input[type='text'], #form input[type='email'], #form input[type='number'], select").map(function(){
                                 Data[this.id]=this.value;
                             });
 
