@@ -42,6 +42,17 @@ class EstablecimientosEducativosTable extends Migration
             $table->string('tabletas_regulares')->nullable()->default(null);
             $table->string('tabletas_buenos')->nullable()->default(null);
             $table->string('tabletas_malos')->nullable()->default(null);
+
+            $table->string('imagen1')->nullable()->default(null);
+            $table->string('imagen2')->nullable()->default(null);
+            $table->string('imagen3')->nullable()->default(null);
+            $table->string('imagen4')->nullable()->default(null);
+            $table->string('imagen5')->nullable()->default(null);
+            $table->string('imagen6')->nullable()->default(null);
+            $table->string('imagen7')->nullable()->default(null);
+            $table->string('imagen8')->nullable()->default(null);
+            $table->string('imagen9')->nullable()->default(null);
+            $table->string('imagen10')->nullable()->default(null);
             $table->timestamps();
         });
     }

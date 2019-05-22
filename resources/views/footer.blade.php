@@ -12,15 +12,28 @@
          })
 
          window.showInfo=()=>{
-           	$(".wizard_form").show("slow")
-           	let Establecimiento=JSON.parse($("#establecimientos_educativos").val());
-	        $("#nombre_info").text(Establecimiento.nombre);
+             	$(".wizard_form").show("slow")
+             	let Establecimiento=JSON.parse($("#establecimientos_educativos").val());
+  	          $("#nombre_info").text(Establecimiento.nombre);
 
-	        $("#codigo").text(Establecimiento.codigo);
-	        $("#municipio").text(Establecimiento.municipio);
-	        $("#region").text(Establecimiento.region);
-	        $("#zona").text(Establecimiento.zona);
-	        $("#establecimientoEdicativoInfo").show("slow")
+    	        $("#codigo").text(Establecimiento.codigo);
+    	        $("#municipio").text(Establecimiento.municipio);
+    	        $("#region").text(Establecimiento.region);
+    	        $("#zona").text(Establecimiento.zona);
+    	        $("#establecimientoEdicativoInfo").show("slow")
+
+
+              for (key in Establecimiento) {
+                $("input[type='number']#"+key+", input[type='text']#"+key+", input[type='email']#"+key).val(Establecimiento[key])
+                  if ($("input[name='"+key+"']").attr("type")=="radio") {
+                    $("input[name='"+key+"'][value='"+Establecimiento[key]+"']").click();
+                  }
+              }
+              // for (var i = 1; i < 11; i++) {
+              //   if(Establecimiento["imagen"+i]=!null){
+              //     console.log(Establecimiento["imagen"+i]);
+              //   }
+              // }
            }
 
 
@@ -29,7 +42,6 @@
 
             for (key in window.EstablecimientosEducativos) {
               if ( $("#municipios").val()==EstablecimientosEducativos[key].municipio) {
-                console.log(EstablecimientosEducativos[key]);
                 $("#establecimientos_educativos").append("<option value='"+JSON.stringify(EstablecimientosEducativos[key])+"'>"+EstablecimientosEducativos[key].nombre+"</option>")
               }
             }

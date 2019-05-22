@@ -6,7 +6,7 @@
       <div class="col-md-6">
          <div class="form-group mb-3" style="margin-top: 50px;">
    <span>Municipio: </span>
-      <select onchange="showEstablecimientoAcademico()" class="form-control" id="municipios">
+      <select onchange="showEstablecimientoAcademico()" class="form-control" id="municipios" name="municipios">
          @foreach ($Datos["Municipios"] as $Municipio)
             <option>{{$Municipio->nombre}}</option>
          @endforeach
@@ -16,7 +16,7 @@
       <div class="col-md-6">
          <div class="form-group mb-3" style="margin-top: 50px;">
    <span>Establecimiento Educativo: </span>
-      <select onchange="showInfo()" disabled="" class="form-control" id="establecimientos_educativos">
+      <select onchange="showInfo()" disabled="" class="form-control" id="establecimientos_educativos" name="establecimientos_educativos">
          @foreach ($Datos["EstablecimientosEducativos"] as $EstablecimientoEducativo)
             <option value="{{$EstablecimientoEducativo}}">{{$EstablecimientoEducativo->nombre}}</option>
          @endforeach
@@ -57,7 +57,7 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-badge"></i></span>
       </div>
-      <input class="form-control" id="numero_estudiantes" placeholder="Escriba la cantidad aqui en numeros enteros" type="number">
+      <input class="form-control" id="numero_estudiantes" name="numero_estudiantes" placeholder="Escriba la cantidad aqui en numeros enteros" type="number">
    </div>
 </div>
 <div class="form-group mb-3" style="margin-top: 20px;">
@@ -66,7 +66,7 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-collection"></i></span>
       </div>
-      <input class="form-control" id="direccion" required="" placeholder="Escriba su direccion aqui" type="text">
+      <input class="form-control" id="direccion" name="direccion" required="" placeholder="Escriba su direccion aqui" type="text">
    </div>
 </div>
 <div class="form-group mb-3" style="margin-top: 20px;">
@@ -75,7 +75,7 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-map-big"></i></span>
       </div>
-      <input class="form-control" id="telefono" required="" placeholder="Escriba su numero de telefono aqui" type="number">
+      <input class="form-control" id="telefono" name="telefono" required="" placeholder="Escriba su numero de telefono aqui" type="number">
    </div>
 </div>
 

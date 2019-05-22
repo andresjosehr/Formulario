@@ -37,8 +37,23 @@ class DiagnosticoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        $i=1;
+        foreach($request->file('imagenes') as $file){
+             $nombre = str_random(30).".".$file->getClientOriginalExtension();
+             $file->move(public_path("/aulas/"), $nombre);
+             $request->merge(["imagen".$i => $nombre]);
+             $i++;
+        }
+
+
+        $request->merge(["establecimientos_educativos" => json_decode($request->establecimientos_educativos, true)]);
+
+        $Datos["EstablecimientosEducativos"]=EstablecimientosEducativos::all();
+        $Datos["Municipios"]=Municipios::all();
+        EstablecimientosEducativos::where("id", $request->establecimientos_educativos["id"])->update($request->except("establecimientos_educativos", "_token", "municipios", "imagenes"));
+
+        return view('Formulario1', ["Exito" => "Exito", "Datos" => $Datos]);
     }
 
     /**

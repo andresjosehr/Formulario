@@ -3,6 +3,16 @@
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/localization/messages_es.js"></script>
 <main>
+  <script>
+    var url="{{Request::root()}}"
+  </script>
+  @if (isset($Exito))
+    <script>
+      $(document).ready(function(){
+        swal("¡Listo!", "Información registrada exitosamente", "success");
+      })
+  </script>
+  @endif
    <section class="section section-shaped section-lg">
       <div class="shape shape-style-1 bg-gradient-default">
          <span></span>
@@ -68,7 +78,8 @@
                            </div>
                         </div>
                      </div>
-                     <form role="form" id="form">
+                     <form role="form" id="form" method="POST" enctype="multipart/form-data">
+                      @csrf
                         <div class="row setup-content" id="step-1">
                            <div class="col-xs-12" style="width: 100%;">
                               <div class="col-md-12" style="padding: 50px; margin-bottom: 50px">
@@ -97,16 +108,16 @@
                               </div>
                            </div>
                         </div>
-                        </form>
                         <div class="row setup-content" id="step-4">
                            <div class="col-xs-12" style="width: 100%;">
                               <div class="col-md-12" style="padding: 50px; margin-bottom: 50px; width: 100%">
                                 <br>
                                  @include("AulaInformatica")
-                                 <button onclick="recopDat()" class="btn btn-success pull-right btn-block enviar">¡Enviar!</button>
+                                 <button {{-- onclick="recopDat()" --}} type="submit" class="btn btn-success pull-right btn-block enviar">¡Enviar!</button>
                               </div>
                            </div>
                         </div>
+                        </form>
                   </div>
                   <style>
                      .btn-primary{
@@ -144,6 +155,37 @@
                             $("input[type='radio']:checked").map(function(){
                               Data[this.id]=this.value;
                             })
+
+                            Datos["files"] = new FormData();
+                            jQuery.each(jQuery('#file')[0].files, function(i, file) {
+                                Datos["files"].append('file-'+i, file);
+                            });
+
+                            Datos.append('Data', JSON.stringify( Data ))
+
+
+
+                            $.ajax({
+                                type: 'POST',
+                                url: "http://localhost/workana/Formulario2/public/",
+                                data: Datos,
+                                cache: false,
+                                contentType: false,
+                                processData: false,
+                                headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                                success: function(result){
+                                  $(".loading_avicola").hide("fast", function(){
+                                    $(".btn_avicola").show("fast");
+                                  })
+
+                                  if (result=="Exito") {
+                                    swal("¡Listo!", "Los datos han sido registrados exitosamente", "success");
+
+                                  }
+
+                              }
+                            });
+
                         });
                       }
                     </script>
