@@ -115,15 +115,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_totales" name="computadores_totales" type="number" required="">
-            </div>
-         </div>
-         <div class="col-md-3">
-            <span style="font-size: 12px">Regular: </span>
-            <div class="input-group input-group-alternative">
-               <div class="input-group-prepend">
-               </div>
-               <input class="form-control" id="computadores_regulares" name="computadores_regulares" type="number" required="">
+               <input disabled="" class="form-control" id="computadores_totales" name="computadores_totales" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -131,7 +123,15 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_buenos" name="computadores_buenos" type="number" required="">
+               <input onchange="CalculateTotalCompu()" class="form-control" id="computadores_buenos" name="computadores_buenos" type="number" required="">
+            </div>
+         </div>
+         <div class="col-md-3">
+            <span style="font-size: 12px">Regular: </span>
+            <div class="input-group input-group-alternative">
+               <div class="input-group-prepend">
+               </div>
+               <input onchange="CalculateTotalCompu()" class="form-control" id="computadores_regulares" name="computadores_regulares" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -139,7 +139,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_malos" name="computadores_malos" type="number" required="">
+               <input onchange="CalculateTotalCompu()" class="form-control" id="computadores_malos" name="computadores_malos" type="number" required="">
             </div>
          </div>
       </div>
@@ -155,15 +155,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_totales" name="tabletas_totales" type="number" required="">
-            </div>
-         </div>
-         <div class="col-md-3">
-            <span style="font-size: 12px">Regular: </span>
-            <div class="input-group input-group-alternative">
-               <div class="input-group-prepend">
-               </div>
-               <input class="form-control" id="tabletas_regulares" name="tabletas_regulares" type="number" required="">
+               <input disabled=""  class="form-control" id="tabletas_totales" name="tabletas_totales" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -171,7 +163,15 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_buenos" name="tabletas_buenos" type="number" required="">
+               <input onchange="CalculateTotalTablet()" class="form-control" id="tabletas_buenos" name="tabletas_buenos" type="number" required="">
+            </div>
+         </div>
+         <div class="col-md-3">
+            <span style="font-size: 12px">Regular: </span>
+            <div class="input-group input-group-alternative">
+               <div class="input-group-prepend">
+               </div>
+               <input onchange="CalculateTotalTablet()" class="form-control" id="tabletas_regulares" name="tabletas_regulares" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -179,7 +179,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_malos" name="tabletas_malos" type="number" required="">
+               <input onchange="CalculateTotalTablet()" class="form-control" id="tabletas_malos" name="tabletas_malos" type="number" required="">
             </div>
          </div>
       </div>

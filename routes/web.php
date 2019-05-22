@@ -11,4 +11,8 @@
 |
 */
 
-Route::resource('/', "DiagnosticoController");
+Route::get('epa', function(){
+	return redirect("/");
+});
+
+ Route::resource('diagnostico', "DiagnosticoController");

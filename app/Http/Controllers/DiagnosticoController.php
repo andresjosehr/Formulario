@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\EstablecimientosEducativos;
 use App\Municipios;
+use Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\Exportable;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 
 class DiagnosticoController extends Controller
 {
@@ -17,7 +22,7 @@ class DiagnosticoController extends Controller
     {   
         $Datos["EstablecimientosEducativos"]=EstablecimientosEducativos::all();
         $Datos["Municipios"]=Municipios::all();
-        return view("Formulario1", ["Datos" => $Datos]);
+        return view("Formulario", ["Datos" => $Datos]);
     }
 
     /**
@@ -53,7 +58,7 @@ class DiagnosticoController extends Controller
         $Datos["Municipios"]=Municipios::all();
         EstablecimientosEducativos::where("id", $request->establecimientos_educativos["id"])->update($request->except("establecimientos_educativos", "_token", "municipios", "imagenes"));
 
-        return view('Formulario1', ["Exito" => "Exito", "Datos" => $Datos]);
+        return view('Formulario', ["Exito" => "Exito", "Datos" => $Datos]);
     }
 
     /**
@@ -100,4 +105,11 @@ class DiagnosticoController extends Controller
     {
         //
     }
+
+    public function ExportExcel()
+    {
+        return "Epale";
+    }
+
+    
 }
