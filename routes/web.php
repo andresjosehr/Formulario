@@ -11,14 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('Formulario1');
-});
-
-Route::get('Formulario1', function () {
-    return view('Formulario1');
-});
-
-Route::get('Formulario2', function () {
-    return view('Formulario2');
-});
+Route::resource('/', "DiagnosticoController");

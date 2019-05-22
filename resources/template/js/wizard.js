@@ -9,6 +9,7 @@ $(document).ready(function () {
        });
 
         $("#form").validate({
+            lang: 'es',  // or whatever language option you have.
             errorPlacement: function (error, element) {
                 var lastError = $(element).data('lastError'),
                     newError = $(error).text();
@@ -22,7 +23,8 @@ $(document).ready(function () {
             },
             success: function (label, element) {
                 $(element).tooltipster('hide');
-            }
+            },
+
         });
 
   
@@ -43,7 +45,13 @@ $(document).ready(function () {
         if (!$item.hasClass('disabled')) {
             navListItems.removeClass('btn-primary').addClass('btn-default');
             $item.addClass('btn-primary');
-            $('input, select').tooltipster("hide");
+            try {
+              $('input, select').tooltipster("hide");
+            }
+            catch(error) {
+              console.log(error);
+            }
+            
             allWells.hide("slow");
             $target.show("slow");
             $target.find('input:eq(0)').focus();
