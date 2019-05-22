@@ -137,9 +137,13 @@
                         $(".enviar").on('submit', function(e){
                             e.preventDefault();
                             var Data={};
-                            $("#form input[type='text'], #form input[type='email']").map(function(){
-                                Data[this.id]=console.log(this.value)
+                            $("#form input[type='text'], #form input[type='email'], select").map(function(){
+                                Data[this.id]=this.value;
                             });
+
+                            $("input[type='radio']:checked").map(function(){
+                              Data[this.id]=this.value;
+                            })
                         });
                       }
                     </script>

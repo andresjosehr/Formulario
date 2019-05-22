@@ -115,7 +115,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_totales" type="text" required="">
+               <input class="form-control" id="computadores_totales" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -123,7 +123,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_regulares" type="text" required="">
+               <input class="form-control" id="computadores_regulares" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -131,7 +131,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_buenos" type="text" required="">
+               <input class="form-control" id="computadores_buenos" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -139,7 +139,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="computadores_malos" type="text" required="">
+               <input class="form-control" id="computadores_malos" type="number" required="">
             </div>
          </div>
       </div>
@@ -155,7 +155,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_totales" type="text" required="">
+               <input class="form-control" id="tabletas_totales" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -163,7 +163,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_regulares" type="text" required="">
+               <input class="form-control" id="tabletas_regulares" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -171,7 +171,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_buenos" type="text" required="">
+               <input class="form-control" id="tabletas_buenos" type="number" required="">
             </div>
          </div>
          <div class="col-md-3">
@@ -179,7 +179,7 @@
             <div class="input-group input-group-alternative">
                <div class="input-group-prepend">
                </div>
-               <input class="form-control" id="tabletas_malos" type="text" required="">
+               <input class="form-control" id="tabletas_malos" type="number" required="">
             </div>
          </div>
       </div>

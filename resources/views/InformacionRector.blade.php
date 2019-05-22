@@ -16,7 +16,7 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
       </div>
-      <input class="form-control" id="telefono_rector" required="" placeholder="Escriba aqui el numero celular del rector" type="text">
+      <input class="form-control" id="telefono_rector" required="" placeholder="Escriba aqui el numero celular del rector" type="number">
    </div>
 </div>
 <div class="form-group mb-3" style="margin-top: 20px;">

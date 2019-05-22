@@ -25,6 +25,6 @@
       <div class="input-group-prepend">
          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
       </div>
-      <input class="form-control" id="email_docente" required="" placeholder="Escriba aqui el correo electronico del docente" type="email">
+      <input class="form-control" id="email_docente" required="" placeholder="Escriba aqui el correo electronico del docente" type="number">
    </div>
 </div>
