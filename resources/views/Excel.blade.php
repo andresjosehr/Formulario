@@ -13,16 +13,16 @@
 			<td>Ejemplo 4</td>
 		</tr>	
 		<tr>
-			<td>Ejemplo 5</td>
-			<td>Ejemplo 6</td>
-			<td>Ejemplo 7</td>
-			<td>Ejemplo 8</td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
 		</tr>	
 		<tr>
-			<td><img src="aulas/Madrid.jpg" alt=""></td>
-			<td>Ejemplo 6</td>
-			<td>Ejemplo 7</td>
-			<td>Ejemplo 8</td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
+			<td><img src="aulas/Madrid.jpg" style="width:90px;height:85px;" alt=""></td>
 		</tr>	
 	</tbody>
 </table>
