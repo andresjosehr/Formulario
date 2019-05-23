@@ -11,8 +11,15 @@
 |
 */
 
-Route::get('epa', function(){
-	return redirect("/");
+Route::get('/', function(){
+	return redirect("diagnostico");
 });
-
  Route::resource('diagnostico', "DiagnosticoController");
+
+
+
+
+Route::get('exportar', "DiagnosticoController@ExportExcel");
+Route::get('Excel', function(){
+	return view("Excel");
+});

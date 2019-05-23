@@ -9,7 +9,11 @@ use Maatwebsite\Excel\Facades\Excel;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithEvents; 
+use Maatwebsite\Excel\Concerns\WithDrawings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
+use App\Exportacion;
+
 
 class DiagnosticoController extends Controller
 {
@@ -108,8 +112,79 @@ class DiagnosticoController extends Controller
 
     public function ExportExcel()
     {
-        return "Epale";
+
+
+         return Excel::download(new Exportacion, 'users.xlsx');
     }
 
-    
+
 }
+
+
+
+
+
+
+class UsersExport implements FromCollection, WithHeadings, ShouldAutoSize
+{
+    use Exportable;
+
+    public function collection(){
+
+
+
+        return collect(EstablecimientosEducativos::where("id", "109")->get());
+
+    }
+
+    public function headings(): array
+    {  
+          $hed =[
+          "ID",
+          "Nombre",
+          "Codigo",
+          "Region",
+          "Municipio",
+          "Tipo de Zona",
+          "Numero de Estudiantes",
+          "Direccion",
+          "Telefono",
+          "Nombre del Rector",
+          "Telefono del Rector",
+          "Email del Rector",
+          "Nombre del Docente",
+          "Telefono del Docente",
+          "Email del Docente",
+          "¿Hay aula de informatica?",
+          "¿El aula cuenta con cerradura?",
+          "Tipo de conexion a internet",
+          "Calidad de conexion a internet",
+          "¿Cuenta con energia electrica?",
+          "Computadores buenos",
+          "Computadores regulares",
+          "Computadores malos",
+          "Computadores totales",
+          "Tabletas buenas",
+          "Tabletas regulares",
+          "Tabletas malas",
+          "Tabletas totales",
+          "Imagen 1",
+          "Imagen 2",
+          "Imagen 3",
+          "Imagen 4",
+          "Imagen 5",
+          "Imagen 6",
+          "Imagen 7",
+          "Imagen 8",
+          "Imagen 9",
+          "Imagen 10",
+          "Fecha de creación",
+          "Fecha de edición",
+        ];
+
+        return $hed;
+    }
+
+
+}
+

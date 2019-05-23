@@ -1,0 +1,40 @@
+.custom_carac{
+    margin-top: -15px;
+    font-size: 1rem
+}
+
+.custom_next{
+    padding: 50px;
+    margin-bottom: 50px;
+    width: 100%
+}
+    .custom_btn{
+        padding: 50px;
+        margin-bottom: 50px;
+        width: 100%
+    }
+ .btn-primary{
+ background-color: #fff !important;
+ color: black !important;
+ }
+ input, select, textarea{
+     color: black !important;
+ }
+
+ textarea:focus, input:focus {
+     color: black !important;
+ }
+
+ #computadores_info input, #tableta_info input { 
+    text-align: center !important; 
+}
+
+.chosen-container{
+  width: 100% !important;
+  margin-top: 7px;
+  margin-bottom: -14px;
+}
+
+#establecimientoEdicativoInfo{
+  display: none; text-align: center;margin-top: 35px;
+}
