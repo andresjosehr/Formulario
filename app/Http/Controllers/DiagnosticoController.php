@@ -113,8 +113,9 @@ class DiagnosticoController extends Controller
     public function ExportExcel()
     {
 
-
-         return Excel::download(new Exportacion, 'users.xlsx');
+         
+         $sheet = new Exportacion;
+         return Excel::download( $sheet, 'users.xlsx');
     }
 
 

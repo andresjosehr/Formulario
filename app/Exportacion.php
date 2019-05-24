@@ -26,7 +26,7 @@ class Exportacion implements FromCollection, ShouldAutoSize, WithDrawings, WithH
      */
     public function Drawings()
     {
-    	$i=0; $h=0;
+    	$i=3; $h=0;
     	foreach (EstablecimientosEducativos::all() as $value) {
     		if ($value->imagen1!=null) {
     			$drawing[$h] = new \PhpOffice\PhpSpreadsheet\Worksheet\Drawing();
@@ -139,11 +139,11 @@ public function headings(): array
           "Nombre del Docente",
           "Telefono del Docente",
           "Email del Docente",
-          "¿Hay aula de informatica?",
-          "¿El aula cuenta con cerradura?",
+          "Hay aula de informatica",
+          "El aula cuenta con cerradura",
           "Tipo de conexion a internet",
           "Calidad de conexion a internet",
-          "¿Cuenta con energia electrica?",
+          "Cuenta con energia electrica",
           "Computadores buenos",
           "Computadores regulares",
           "Computadores malos",
@@ -162,13 +162,8 @@ public function headings(): array
           "Imagen 8",
           "Imagen 9",
           "Imagen 10",
-<<<<<<< HEAD
-          "Fecha de creaciÃ³n",
-          "Fecha de ediciÃ³n",
-=======
-          "Fecha de creación",
-          "Fecha de edición",
->>>>>>> a527d66a026a220bc22f79b6b4ec89d9ef713f8f
+          "Fecha de creacion",
+          "Fecha de edicion",
         ];
 
         return $hed;

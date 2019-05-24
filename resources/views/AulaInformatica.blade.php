@@ -188,7 +188,7 @@
 </div>
 <div class="form-group" style="margin-top: 40px;margin-bottom: 40px;">
    <label class="col control-label">
-   Carga las fotos del aula
+   Carga las fotos del aula, estados de computadores y de la red de datos. Tenga en cuenta que debe subir entre 5 y 10 fotos para procesar su información
    </label>
    <div class="col">
       <span >
@@ -196,3 +196,21 @@
       </span>
    </div>
 </div>
+
+
+<style>
+
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body{
+   
+  }
+  .esta_info{
+   display: block !important;
+
+  }
+}
+
+
+</style>

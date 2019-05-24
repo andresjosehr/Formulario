@@ -53,7 +53,7 @@
                            <div class="col-md-12">
                               <h2 id="nombre_info"></h2>
                            </div>
-                           <div style="display: flex;">
+                           <div style="display: flex;" class="esta_info">
                            <div class="col-md-3">
                               <p>Codigo DANE</p>
                               <h3 class="custom_carac" id='codigo'>Valor</h3>

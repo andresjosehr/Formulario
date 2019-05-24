@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
 
 
 
-
+    	DB::table("municipios")->delete();
+    	DB::table("establecimientos_educativos")->delete();
 
 
 
