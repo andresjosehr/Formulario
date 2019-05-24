@@ -11,11 +11,20 @@
 |
 */
 
-Route::get('/', function(){
-	return redirect("diagnostico");
+Route::get('/{codigo}', function(){
+	return "Hola";
 });
- Route::resource('diagnostico', "DiagnosticoController");
 
+ Route::get('/', function(){
+	if(isset($_GET["exportar"])){
+		return App::call('App\Http\Controllers\DiagnosticoController@ExportExcel');
+	}else{
+		return App::call('App\Http\Controllers\DiagnosticoController@index');
+	}
+});
+
+
+Route::post('/', "DiagnosticoController@store");
 
 
 

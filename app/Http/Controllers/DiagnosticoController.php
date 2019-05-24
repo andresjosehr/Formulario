@@ -155,11 +155,11 @@ class UsersExport implements FromCollection, WithHeadings, ShouldAutoSize
           "Nombre del Docente",
           "Telefono del Docente",
           "Email del Docente",
-          "Â¿Hay aula de informatica?",
-          "Â¿El aula cuenta con cerradura?",
+          "¿Hay aula de informatica?",
+          "¿El aula cuenta con cerradura?",
           "Tipo de conexion a internet",
           "Calidad de conexion a internet",
-          "Â¿Cuenta con energia electrica?",
+          "¿Cuenta con energia electrica?",
           "Computadores buenos",
           "Computadores regulares",
           "Computadores malos",
@@ -178,8 +178,8 @@ class UsersExport implements FromCollection, WithHeadings, ShouldAutoSize
           "Imagen 8",
           "Imagen 9",
           "Imagen 10",
-          "Fecha de creaciÃ³n",
-          "Fecha de ediciÃ³n",
+          "Fecha de creación",
+          "Fecha de edición",
         ];
 
         return $hed;
