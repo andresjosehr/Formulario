@@ -145,7 +145,16 @@
                  $("pre").remove();
          
                  $("#establecimientos_educativos, #municipios").val(null);
-                 $("#establecimientos_educativos, #municipios").chosen();
+
+                 $("#municipios").chosen({
+                     placeholder_text_single: "Seleccione el municipio",
+                     no_results_text: "No existen municipios con esta referencia"
+                   });
+                     $("#establecimientos_educativos").chosen({
+                     placeholder_text_single: "Selecciona tu colegio",
+                     no_results_text: "No existen colegios con esta referencia"
+                   });
+
                  window.EstablecimientosEducativos='@php echo $Datos["EstablecimientosEducativos"]; @endphp'
                  window.EstablecimientosEducativos=JSON.parse(window.EstablecimientosEducativos);
               }
