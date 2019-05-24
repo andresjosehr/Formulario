@@ -3488,6 +3488,15 @@ DB::table("establecimientos_educativos")->insert( [
 'nombre'=>'CE Berlin'
 ] );
 
+DB::table("establecimientos_educativos")->insert( [
+'region'=>'Ex Provincia',
+'municipio'=>'Guaitarilla',
+'zona'=>'Urbana',
+'codigo'=>152320000011,
+'nombre'=>'IE Nuestra Señora de las Nieves'
+] );
+
+
 
 
 
