@@ -114,8 +114,7 @@ class DiagnosticoController extends Controller
     {
 
          
-         $sheet = new Exportacion;
-         return Excel::download( $sheet, 'users.xlsx');
+         return Excel::download( new Exportacion, 'users.xlsx');
     }
 
 
