@@ -132,7 +132,7 @@
       <script>  
       function VerImagen(img, idEstablecimiento, idImagen, url ='{{Request::root()}}') {
           $("#establecimiento_"+idEstablecimiento+" #imagen_"+idImagen).empty();
-          $("#establecimiento_"+idEstablecimiento+" #imagen_"+idImagen).append("<img src='"+url+"/aulas/"+img+"'>");
+          $("#establecimiento_"+idEstablecimiento+" #imagen_"+idImagen).append("<a href='"+url+"/aulas/"+img+"' target='_blank'><img style='max-height: 200px;' src='"+url+"/aulas/"+img+"'></a>");
       }
     </script>
 
