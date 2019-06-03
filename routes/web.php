@@ -18,9 +18,14 @@ Route::get('/{codigo}', function(){
  Route::get('/', function(){
 	if(isset($_GET["exportar"])){
 		return App::call('App\Http\Controllers\DiagnosticoController@ExportExcel');
-	}else{
-		return App::call('App\Http\Controllers\DiagnosticoController@index');
+		die();
 	}
+	if(isset($_GET["Consulta"])){
+		return App::call('App\Http\Controllers\DiagnosticoController@show');
+		die();
+	}
+	return App::call('App\Http\Controllers\DiagnosticoController@index');
+	
 });
 
 
